@@ -18,7 +18,7 @@ class Qtemplate extends Component {
              <br />
              <div id="c1">
             { ans == 0 ?
-             <form>
+            <form onSubmit={e=>{e.preventDefault() ;}}>
              <input type="text" onChange={func3} />
              <button type="reset" onClick={()=>{
                  func4();
@@ -27,7 +27,7 @@ class Qtemplate extends Component {
                     func() ;
                  }
                  }}>Enter</button>
-             </form> : <div>
+                 </form> : <div>
                  <b>Your Answer</b> : {answer[index-1].length == 0 ? "Not Answered" : answer[index-1] }
                  <br />
                  <b>Correct Answer</b> : {Answer[index-1]}
